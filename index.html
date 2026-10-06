@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khổng Đỗ Thanh Huyền - Miss IT 2025 | Top 20 Miss HNUE 2025</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        neutral: {
+                            50: '#FBFBFC',
+                            100: '#F4F5F7',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            800: '#1F2937',
+                            900: '#111827',
+                        },
+                        roseaccent: {
+                            50: '#FFF1F2',
+                            100: '#FFE4E6',
+                            500: '#F43F5E',
+                            600: '#E11D48',
+                            700: '#BE123C',
+                        },
+                        hnueblue: {
+                            50: '#EFF6FF',
+                            100: '#DBEAFE',
+                            600: '#2563EB',
+                            700: '#1D4ED8',
+                            900: '#1E3A8A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAFAFB;
+            color: #1F2937;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Clean Elegant Cards */
+        .card-clean {
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.25s ease;
+        }
+        .card-clean:hover {
+            border-color: #D1D5DB;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            transform: translateY(-2px);
+        }
+
+        /* Header backdrop blur */
+        .nav-blur {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        /* Subtle Accent Underline */
+        .text-accent {
+            color: #BE123C;
+        }
+
+        /* Clean Badge */
+        .badge-soft-rose {
+            background-color: #FFF1F2;
+            color: #BE123C;
+            border: 1px solid #FFE4E6;
+        }
+        .badge-soft-blue {
+            background-color: #EFF6FF;
+            color: #1D4ED8;
+            border: 1px solid #DBEAFE;
+        }
+        .badge-soft-amber {
+            background-color: #FEF3C7;
+            color: #92400E;
+            border: 1px solid #FDE68A;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4F5F7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D1D5DB;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9CA3AF;
+        }
+    </style>
+</head>
+<body class="selection:bg-rose-100 selection:text-rose-800">
+
+    <!-- NAVIGATION (CLEAN & MINIMAL WHITE) -->
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:bg-rose-600 transition-colors">
+                    <span>H</span>
+                </div>
+                <div>
+                    <div class="font-display font-bold text-base text-slate-900 tracking-tight flex items-center gap-1.5">
+                        <span>Khổng Đỗ Thanh Huyền</span>
+                        <span class="text-xs text-rose-600">👑</span>
+                    </div>
+                    <p class="text-xs text-slate-500 font-medium">Khoa CNTT • ĐH Sư phạm Hà Nội</p>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold tracking-wide text-slate-600">
+                <a href="#about" class="hover:text-rose-600 transition-colors">Về Thanh Huyền</a>
+                <a href="#miss-hnue" class="hover:text-rose-600 text-rose-700 transition-colors flex items-center gap-1">
+                    <span>👑 Miss HNUE & IT</span>
+                </a>
+                <a href="#achievements" class="hover:text-rose-600 transition-colors">Bảng Thành Tích</a>
+                <a href="#pedagogy" class="hover:text-rose-600 transition-colors">Nghiệp Vụ Sư Phạm</a>
+                <a href="#publications" class="hover:text-rose-600 transition-colors">Công Bố Khoa Học</a>
+                <a href="#contact" class="hover:text-rose-600 transition-colors">Liên Hệ</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2.5">
+                <a href="#miss-hnue" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition-colors">
+                    <span>👑 Thông Điệp Miss HNUE</span>
+                </a>
+
+                <button onclick="openEditModal()" title="Chỉnh sửa nhanh thông tin cá nhân" class="px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 hover:border-slate-300 text-slate-700 bg-white shadow-sm transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-sliders text-slate-400 text-xs"></i>
+                    <span class="hidden md:inline">Tùy biến</span>
+                </button>
+
+                <button onclick="toggleMobileMenu()" class="lg:hidden w-9 h-9 rounded-lg border border-slate-200 flex items-center justify-center text-slate-600">
+                    <i class="fa-solid fa-bars text-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-2 text-sm font-medium text-slate-700">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 hover:text-rose-600">✨ Về Thanh Huyền</a>
+            <a href="#miss-hnue" onclick="toggleMobileMenu()" class="block py-2 text-rose-600 font-semibold">👑 Lời Chào & Thông Điệp Miss HNUE 2025</a>
+            <a href="#achievements" onclick="toggleMobileMenu()" class="block py-2 hover:text-rose-600">🏆 Bảng Thành Tích & Danh Hiệu</a>
+            <a href="#pedagogy" onclick="toggleMobileMenu()" class="block py-2 hover:text-rose-600">🎓 Nghiệp Vụ Sư Phạm (3 Năm Liên Tiếp)</a>
+            <a href="#publications" onclick="toggleMobileMenu()" class="block py-2 hover:text-rose-600">📚 Công Bố Khoa Học (Springer & IEEE)</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 hover:text-rose-600">💌 Liên Hệ & Hợp Tác</a>
+        </div>
+    </header>
+
+    <!-- MAIN WRAPPER -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-20 space-y-20">
+
+        <!-- 1. HERO SECTION (CLEAN & ELEGANT WHITE) -->
+        <section id="hero" class="pt-6 sm:pt-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Left: Headline & Introduction -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Clean Pill Badges -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold badge-soft-rose">
+                            👑 Miss IT 2025
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold badge-soft-rose">
+                            ✨ Top 20 Miss HNUE 2025
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold badge-soft-blue">
+                            Khoa CNTT • ĐH Sư Phạm Hà Nội
+                        </span>
+                    </div>
+
+                    <!-- Main Name Heading -->
+                    <div class="space-y-2">
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight leading-tight">
+                            Khổng Đỗ Thanh Huyền
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-600 font-medium">
+                            Sinh viên năm thứ 4 • Nhà nghiên cứu trẻ • Người đẹp Sư phạm
+                        </p>
+                    </div>
+
+                    <!-- Intro Text -->
+                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0" id="hero-bio">
+                        Sinh viên năm thứ 4, khoa Công nghệ thông tin, Trường Đại học Sư phạm Hà Nội. Hoa khôi Miss IT 2025, Top 20 Miss HNUE 2025. Kiên định trên hành trình học thuật với 3 công bố quốc tế & tạp chí khoa học đã xuất bản, cùng các công trình nghiên cứu đang trong quá trình xét duyệt và phản biện độc lập.
+                    </p>
+
+                    <!-- Action CTAs -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                        <a href="#miss-hnue" class="px-5 py-2.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-semibold text-xs tracking-wide shadow-sm transition-all flex items-center gap-2">
+                            <span>👑 Thông Điệp Miss HNUE</span>
+                        </a>
+
+                        <a href="#publications" class="px-5 py-2.5 rounded-lg bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-xs transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-book-bookmark text-slate-500"></i>
+                            <span>Công Bố Khoa Học (DOI)</span>
+                        </a>
+
+                        <a href="#achievements" class="px-5 py-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 font-semibold text-xs transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-trophy text-amber-500"></i>
+                            <span>Bảng Thành Tích</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlight Stats -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-slate-200">
+                        <div class="p-3 bg-white border border-slate-200 rounded-xl text-center">
+                            <div class="text-xl font-bold font-display text-rose-600">Miss IT</div>
+                            <div class="text-[11px] text-slate-500 font-medium">Hoa khôi Khoa CNTT 2025</div>
+                        </div>
+                        <div class="p-3 bg-white border border-slate-200 rounded-xl text-center">
+                            <div class="text-xl font-bold font-display text-rose-600">Top 20</div>
+                            <div class="text-[11px] text-slate-500 font-medium">Miss HNUE 2025</div>
+                        </div>
+                        <div class="p-3 bg-white border border-slate-200 rounded-xl text-center">
+                            <div class="text-xl font-bold font-display text-slate-900">03 Năm</div>
+                            <div class="text-[11px] text-slate-500 font-medium">Nghiệp vụ Sư phạm Cấp Trường</div>
+                        </div>
+                        <div class="p-3 bg-white border border-slate-200 rounded-xl text-center">
+                            <div class="text-xl font-bold font-display text-blue-700">03+</div>
+                            <div class="text-[11px] text-slate-500 font-medium">Đã Xuất Bản & Đang Xét Duyệt</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Clean Minimal Portrait Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-xs sm:max-w-sm card-clean rounded-2xl p-4 bg-white border border-slate-200 shadow-sm space-y-4">
+                        <div class="aspect-[3/4] rounded-xl overflow-hidden bg-slate-100 relative group">
+                            <img id="hero-avatar" src="Ảnh thẻ 3x4.jpg" alt="Khổng Đỗ Thanh Huyền" class="w-full h-full object-cover">
+                            
+                            <!-- Badges on image -->
+                            <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm border border-slate-200 px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-800 shadow-sm flex items-center gap-1.5">
+                                <span>👑</span>
+                                <span>Miss IT 2025</span>
+                            </div>
+
+                            <div class="absolute bottom-3 left-3 right-3 bg-slate-900/80 backdrop-blur-md text-white p-2.5 rounded-lg text-xs space-y-0.5">
+                                <div class="font-bold">Khổng Đỗ Thanh Huyền</div>
+                                <div class="text-[11px] text-slate-300">Khoa Công nghệ thông tin • HNUE</div>
+                            </div>
+                        </div>
+
+                        <!-- Sub-info under photo -->
+                        <div class="pt-1 text-center space-y-1">
+                            <p class="text-xs font-semibold text-slate-700 italic" id="about-quote">
+                                “Sự kiên trì hôm nay chính là đôi cánh đưa ta bay xa ngày mai.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MISS HNUE 2025 & MISS IT SPOTLIGHT (LỜI CHÀO & THÔNG ĐIỆP) -->
+        <section id="miss-hnue" class="space-y-6 scroll-mt-24">
+            <div class="border-b border-slate-200 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-rose-600">Nét đẹp Duyên dáng & Trí tuệ</span>
+                    <h2 class="text-2xl font-bold font-display text-slate-900">Lời Chào & Thông Điệp Dự Thi Miss HNUE 2025</h2>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                    <span class="px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-semibold border border-rose-200">Miss IT 2025</span>
+                    <span class="px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-semibold border border-rose-200">Top 20 Miss HNUE 2025</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Left: Full Speech text -->
+                <div class="lg:col-span-8 card-clean rounded-2xl p-6 sm:p-8 bg-white space-y-5">
+                    <!-- Opening Quote Box -->
+                    <div class="p-4 rounded-xl bg-slate-50 border-l-4 border-rose-600 text-slate-800 text-sm sm:text-base font-medium leading-relaxed">
+                        “Em xin chào thầy cô và mọi người, em là <strong>Khổng Đỗ Thanh Huyền</strong>, sinh viên năm thứ 4, khoa Công nghệ thông tin, Trường Đại học Sư phạm Hà Nội.”
+                    </div>
+
+                    <!-- Main Story -->
+                    <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+                        <p>
+                            Em tin rằng mỗi chúng ta đều có một ngọn lửa đam mê thắp sáng trong tim. Với em, đó là tình yêu dành cho ngành học mà mình đã lựa chọn. Nhưng hành trình giữ vững ngọn lửa ấy chưa bao giờ dễ dàng. Đã có lúc em mệt mỏi, chùn bước, thậm chí tự hỏi liệu mình có đi đúng con đường. Và chính những phút giây khó khăn ấy đã dạy em một bài học quan trọng: <strong class="text-slate-800 font-semibold">đam mê cần được nuôi dưỡng bằng sự kiên trì.</strong>
+                        </p>
+
+                        <p>
+                            Mỗi ngày, em lựa chọn không dừng lại. Em vẫn kiên trì tiến bước, dù chậm rãi nhưng chắc chắn. Bởi em hiểu rằng, chỉ có sự bền bỉ mới biến giấc mơ thành hiện thực và giúp một người bình thường trở thành phiên bản tốt đẹp nhất của chính mình.
+                        </p>
+
+                        <!-- Key Message Banner -->
+                        <div class="p-5 rounded-xl bg-rose-50/70 border border-rose-200 text-center space-y-1">
+                            <span class="text-xs font-bold uppercase tracking-wider text-rose-700">Thông điệp gửi tới cuộc thi</span>
+                            <p class="text-base sm:text-lg font-bold font-display text-rose-800 italic">
+                                “Đừng chỉ mơ ước – hãy kiên định với ước mơ của mình. Bởi sự kiên trì hôm nay chính là đôi cánh đưa ta bay xa ngày mai.”
+                            </p>
+                        </div>
+
+                        <p class="italic text-slate-500 pt-1">
+                            Nếu câu chuyện nhỏ của em chạm đến trái tim bạn, mong rằng em sẽ nhận được sự đồng hành, ủng hộ của thầy cô, bạn bè cùng tất cả mọi người. Sự tin tưởng của mọi người chính là nguồn sức mạnh lớn nhất để em tiếp tục viết tiếp hành trình đam mê của mình.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Profile Identity Card (No Voting) -->
+                <div class="lg:col-span-4 card-clean rounded-2xl p-6 bg-white space-y-5 text-center">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-rose-50 border border-rose-200 text-rose-600 flex items-center justify-center text-2xl shadow-sm">
+                        👑
+                    </div>
+
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold font-display text-slate-900">Khổng Đỗ Thanh Huyền</h3>
+                        <p class="text-xs text-rose-600 font-semibold">Miss IT 2025 • Top 20 Miss HNUE 2025</p>
+                        <p class="text-[11px] text-slate-400">Trường Đại học Sư phạm Hà Nội</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-left space-y-2.5 text-xs">
+                        <div class="flex items-center gap-2 text-slate-700">
+                            <span class="text-rose-600 font-bold">✦</span>
+                            <span><strong>Khoa:</strong> Công nghệ thông tin (FIT)</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-700">
+                            <span class="text-rose-600 font-bold">✦</span>
+                            <span><strong>Khóa:</strong> Sinh viên năm thứ 4</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-700">
+                            <span class="text-rose-600 font-bold">✦</span>
+                            <span><strong>Hội thi:</strong> Miss HNUE 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-700">
+                            <span class="text-rose-600 font-bold">✦</span>
+                            <span><strong>Tinh thần:</strong> Trí tuệ & Duyên dáng Sư phạm</span>
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-rose-50/60 border border-rose-100 text-center">
+                        <p class="text-xs text-rose-800 italic font-medium">
+                            “Tự tin tỏa sáng bằng năng lực tri thức và sự kiên trì bền bỉ.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. BẢNG THÀNH TÍCH & DANH HIỆU (CLEAR CATEGORIZATION) -->
+        <section id="achievements" class="space-y-6 scroll-mt-24">
+            <div class="border-b border-slate-200 pb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Dấu ấn xuất sắc</span>
+                <h2 class="text-2xl font-bold font-display text-slate-900">Bảng Thành Tích & Giải Thưởng 🏆</h2>
+            </div>
+
+            <!-- Group 1: Danh hiệu Sắc đẹp & Hoạt động Sinh viên -->
+            <div class="space-y-3">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                    <span>1. Danh Hiệu Nhan Sắc & Nét Đẹp Nữ Sinh Sư Phạm</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Miss IT 2025 -->
+                    <div class="card-clean rounded-xl p-5 bg-white border border-slate-200 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-200 text-rose-600 flex items-center justify-center text-xl flex-shrink-0">
+                            👑
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800">Năm 2025</span>
+                                <span class="text-xs text-slate-400">Khoa CNTT</span>
+                            </div>
+                            <h4 class="text-base font-bold text-slate-900">Miss IT 2025 (Hoa Khôi Khoa Công Nghệ Thông Tin)</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Đại diện tiêu biểu cho vẻ đẹp hiện đại, thông minh và năng động của nữ sinh Khoa Công nghệ thông tin, Trường ĐH Sư phạm Hà Nội.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Top 20 Miss HNUE 2025 -->
+                    <div class="card-clean rounded-xl p-5 bg-white border border-slate-200 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-200 text-rose-600 flex items-center justify-center text-xl flex-shrink-0">
+                            ✨
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800">Năm 2025</span>
+                                <span class="text-xs text-slate-400">Cấp Trường</span>
+                            </div>
+                            <h4 class="text-base font-bold text-slate-900">Top 20 Miss HNUE 2025</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Hội thi Nữ sinh thanh lịch Trường Đại học Sư phạm Hà Nội 2025 - Tôn vinh nét đẹp Tri thức, Tài năng và Duyên dáng Sư phạm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2: Nghiên cứu Khoa học Sinh viên -->
+            <div class="space-y-3 pt-2">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                    <span>2. Nghiên Cứu Khoa Học & Giải Thưởng Học Thuật</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Eureka 2026 -->
+                    <div class="card-clean rounded-xl p-5 bg-white border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">🌟</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200">Năm 2026</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-900">Bán Kết Giải Thưởng Euréka 2026</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Vào vòng Bán kết Giải thưởng Sinh viên Nghiên cứu Khoa học Toàn quốc Euréka lần thứ 28 - đấu trường học thuật quy mô toàn quốc.
+                        </p>
+                    </div>
+
+                    <!-- Giai Nhi Cap Truong 2026 -->
+                    <div class="card-clean rounded-xl p-5 bg-white border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">🥈</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200">Năm 2026</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-900">Giải Nhì NCKH Cấp Trường HNUE</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Xuất sắc đạt Giải Nhì tại Hội nghị Nghiên cứu Khoa học Sinh viên Trường Đại học Sư phạm Hà Nội năm 2026.
+                        </p>
+                    </div>
+
+                    <!-- Giai Nhat Cap Khoa 2026 -->
+                    <div class="card-clean rounded-xl p-5 bg-white border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">🥇</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">Năm 2026</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-900">Giải Nhất NCKH Cấp Khoa CNTT</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Đạt Giải Nhất toàn diện tại Hội đồng đánh giá công trình NCKH sinh viên Khoa Công nghệ thông tin 2026.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. NGHIỆP VỤ SƯ PHẠM (3 NĂM LIÊN TIẾP TỪ 2023) -->
+        <section id="pedagogy" class="space-y-6 scroll-mt-24">
+            <div class="border-b border-slate-200 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-700">Bản lĩnh nhà giáo tương lai</span>
+                    <h2 class="text-2xl font-bold font-display text-slate-900">Hội Thi Xử Lý Tình Huống Nghiệp Vụ Sư Phạm</h2>
+                </div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+                    🎖️ 3 Năm Liên Tiếp Cấp Trường (2023 - 2025)
+                </span>
+            </div>
+
+            <div class="card-clean rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                    <div class="md:col-span-8 space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2.5 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-bold">Cấp Trường HNUE</span>
+                            <span class="text-xs text-slate-500 font-medium">Bắt đầu từ năm 2023</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 font-display">
+                            Vững Vàng Chuyên Môn & Nhanh Nhạy Ứng Xử Sư Phạm Học Đường
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Hội thi Xử lý tình huống Nghiệp vụ Sư phạm cấp Trường là hoạt động chuyên môn trọng điểm của Trường Đại học Sư phạm Hà Nội, đòi hỏi sinh viên phải có kiến thức tâm lý giáo dục vững chắc, tư duy linh hoạt và kỹ năng sư phạm chuẩn mực. 
+                            <br><br>
+                            Việc tham gia <strong>3 năm liên tiếp (2023, 2024, 2025)</strong> khẳng định sự rèn luyện bền bỉ, đam mê với nghề giáo và năng lực xử lý các tình huống sư phạm thực tế trong môi trường học đường thời đại số.
+                        </p>
+                    </div>
+
+                    <!-- 3 Milestones Pills -->
+                    <div class="md:col-span-4 space-y-2.5">
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                            <div>
+                                <div class="text-xs font-bold text-slate-900">Năm 2025 (Năm 3 tham gia)</div>
+                                <div class="text-[11px] text-slate-500">Kinh nghiệm & Bản lĩnh chín muồi</div>
+                            </div>
+                            <span class="text-sm font-bold text-blue-600">✓</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                            <div>
+                                <div class="text-xs font-bold text-slate-900">Năm 2024 (Năm 2 tham gia)</div>
+                                <div class="text-[11px] text-slate-500">Rèn giũa kỹ năng ứng xử thực tế</div>
+                            </div>
+                            <span class="text-sm font-bold text-blue-600">✓</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                            <div>
+                                <div class="text-xs font-bold text-slate-900">Năm 2023 (Khởi đầu)</div>
+                                <div class="text-[11px] text-slate-500">Tự tin thử sức từ năm học thứ 2</div>
+                            </div>
+                            <span class="text-sm font-bold text-blue-600">✓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CÔNG BỐ KHOA HỌC (SPRINGER, IEEE, JOURNAL OF SCIENCE & UNDER REVIEW) -->
+        <section id="publications" class="space-y-6 scroll-mt-24">
+            <div class="border-b border-slate-200 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-purple-700">Academic Research & Publications</span>
+                    <h2 class="text-2xl font-bold font-display text-slate-900">Công Bố Khoa Học & Các Đề Tài Nghiên Cứu 📚</h2>
+                </div>
+                <p class="text-xs text-slate-500">Bao gồm các bài báo đã xuất bản chính thức và các công trình đang trong quá trình xét duyệt</p>
+            </div>
+
+            <!-- Subsection 1: Đã xuất bản -->
+            <div class="space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>1. Đã Công Bố & Xuất Bản Chính Thức (Published / Accepted - 03 Công Trình)</span>
+                </h3>
+                
+                <div class="space-y-3.5">
+                    <!-- Paper 1: Springer CCIS 2027 -->
+                    <div class="card-clean rounded-xl p-5 sm:p-6 bg-white border border-slate-200 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded font-bold bg-purple-50 text-purple-800 border border-purple-200">Book Chapter</span>
+                                <span class="font-semibold text-slate-700">Springer Nature • CCIS Series</span>
+                            </div>
+                            <span class="font-bold text-slate-500">Năm 2027</span>
+                        </div>
+
+                        <h4 class="text-base sm:text-lg font-bold text-slate-900 font-display leading-snug">
+                            Enhancing Survey Efficiency: A Validated Vietnamese Short-Form of the MBTI Developed Through Machine Learning
+                        </h4>
+
+                        <p class="text-xs text-slate-600">
+                            <strong class="text-slate-800">Tác giả (Contributors):</strong> 
+                            Tan Hai Nguyen; <span class="font-bold text-rose-700 underline decoration-rose-400">Do Thanh Huyen Khong</span>; Thi Quynh Hoa Nguyen.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-3 pt-1 text-xs">
+                            <a href="https://doi.org/10.1007/978-981-92-2587-3_26" target="_blank" class="text-blue-600 font-semibold hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span>DOI: 10.1007/978-981-92-2587-3_26</span>
+                            </a>
+                            <span class="text-slate-400">•</span>
+                            <span class="text-slate-500">ISBN: 9789819225866 / 9789819225873</span>
+                            <span class="text-slate-400">•</span>
+                            <span class="text-slate-500">ISSN: 1865-0929</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 2: Journal of Science Educational Science 2026 -->
+                    <div class="card-clean rounded-xl p-5 sm:p-6 bg-white border border-slate-200 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded font-bold bg-blue-50 text-blue-800 border border-blue-200">Journal Article</span>
+                                <span class="font-semibold text-slate-700">Journal of Science Educational Science (ĐH Sư phạm Hà Nội)</span>
+                            </div>
+                            <span class="font-bold text-slate-500">2026-06-28</span>
+                        </div>
+
+                        <h4 class="text-base sm:text-lg font-bold text-slate-900 font-display leading-snug">
+                            INTEGRATING MATHEMATICAL ACTIVITIES THROUGH GAMES TO ESTABLISH A MATHEMATICAL FOUNDATION AND PROMOTE CRITICAL THINKING IN PRE-ELEMENTARY CHILDREN
+                        </h4>
+
+                        <p class="text-xs text-slate-600">
+                            <strong class="text-slate-800">Tác giả (Contributors):</strong> 
+                            Nguyen Duy Hai; Nguyen Thi Quynh Hoa; Tran Tuan Long; <span class="font-bold text-rose-700 underline decoration-rose-400">Khong Do Thanh Huyen</span>; Chu Dinh Minh.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-3 pt-1 text-xs">
+                            <a href="https://doi.org/10.18173/2354-1075.2026-0053" target="_blank" class="text-blue-600 font-semibold hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span>DOI: 10.18173/2354-1075.2026-0053</span>
+                            </a>
+                            <span class="text-slate-400">•</span>
+                            <span class="text-slate-500">ISSN: 2354-1075</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 3: IEEE ICIET 2025 -->
+                    <div class="card-clean rounded-xl p-5 sm:p-6 bg-white border border-slate-200 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded font-bold bg-amber-50 text-amber-800 border border-amber-200">Conference Paper</span>
+                                <span class="font-semibold text-slate-700">13th ICIET • IEEE Xplore</span>
+                            </div>
+                            <span class="font-bold text-slate-500">2025-04-18</span>
+                        </div>
+
+                        <h4 class="text-base sm:text-lg font-bold text-slate-900 font-display leading-snug">
+                            Flexible Web-Based Method to Support 1st Grade Math Learning for Vietnamese Children
+                        </h4>
+
+                        <p class="text-xs text-slate-600">
+                            <strong class="text-slate-800">Tác giả (Contributors):</strong> 
+                            Thi Quynh Hoa Nguyen; Duy Hai Nguyen; Ho Khanh Huyen Le; Tan Hai Nguyen; Tuan Long Tran; <span class="font-bold text-rose-700 underline decoration-rose-400">Do Thanh Huyen Khong</span>; Dinh Minh Chu.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-3 pt-1 text-xs">
+                            <a href="https://doi.org/10.1109/iciet66371.2025.11046250" target="_blank" class="text-blue-600 font-semibold hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span>DOI: 10.1109/iciet66371.2025.11046250</span>
+                            </a>
+                            <span class="text-slate-400">•</span>
+                            <span class="text-slate-500">IEEE International Conference</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 2: Đang xét duyệt (Under Review Pipeline) -->
+            <div class="space-y-3 pt-3">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                    <span>2. Các Bài Nghiên Cứu Đang Trong Quá Trình Xét Duyệt & Phản Biện (Under Review Pipeline)</span>
+                </h3>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="card-clean rounded-xl p-5 sm:p-6 bg-white border border-slate-200 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded font-bold bg-amber-50 text-amber-800 border border-amber-200 flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"></span>
+                                    <span>Đang Xét Duyệt / Chờ Đăng (Under Review)</span>
+                                </span>
+                                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-mono font-bold text-[11px]">
+                                    Mã số bài: EN.26.202
+                                </span>
+                            </div>
+                            <span class="text-[11px] text-slate-500 font-medium">Design-Based Research (DBR)</span>
+                        </div>
+
+                        <h4 class="text-base sm:text-lg font-bold text-slate-900 font-display leading-snug">
+                            EN.26.202: Designing Gamified Digital ESP Learning Materials for Information Technology Students: A Design-Based Research Study
+                        </h4>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            <strong class="text-slate-800">Tác giả (Contributors):</strong> Nhóm nghiên cứu & <span class="font-bold text-rose-700 underline decoration-rose-400">Do Thanh Huyen Khong</span>.<br>
+                            <span class="text-slate-600">• <strong>Đề tài:</strong> Thiết kế học liệu số hóa trò chơi hóa (Gamified Digital ESP) hỗ trợ học tiếng Anh chuyên ngành cho sinh viên Công nghệ thông tin theo phương pháp Design-Based Research.</span>
+                        </p>
+
+                        <div class="pt-1 text-xs text-slate-500 flex items-center gap-2 border-t border-slate-100">
+                            <i class="fa-solid fa-clock-rotate-left text-amber-600 text-[11px]"></i>
+                            <span>Tiến độ: Bản thảo nghiên cứu đã hoàn tất và đang trong quy trình xét duyệt xuất bản chính thức.</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- 6. VỀ BẢN THÂN & HỌC VẤN (ABOUT & BACKGROUND) -->
+        <section id="about" class="space-y-6 scroll-mt-24">
+            <div class="border-b border-slate-200 pb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Thông tin cá nhân</span>
+                <h2 class="text-2xl font-bold font-display text-slate-900">Về Khổng Đỗ Thanh Huyền</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Info block 1: Học vấn -->
+                <div class="card-clean rounded-xl p-6 bg-white space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 text-lg">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900">Học Vấn & Chuyên Ngành</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        • <strong>Trường:</strong> Trường Đại học Sư phạm Hà Nội (HNUE)<br>
+                        • <strong>Khoa:</strong> Công nghệ thông tin (FIT)<br>
+                        • <strong>Khóa học:</strong> Sinh viên năm thứ 4<br>
+                        • <strong>Định hướng:</strong> Machine Learning, EdTech, Nghiên cứu GD
+                    </p>
+                </div>
+
+                <!-- Info block 2: Kỹ năng & Nghiên cứu -->
+                <div class="card-clean rounded-xl p-6 bg-white space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 text-lg">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900">Kỹ Năng Nổi Bật</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        • <strong>Công nghệ:</strong> Python, Machine Learning, Web Learning<br>
+                        • <strong>Học thuật:</strong> Viết bài báo khoa học, phân tích thống kê<br>
+                        • <strong>Sư phạm:</strong> Xử lý tình huống GD, thiết kế hoạt động toán học<br>
+                        • <strong>Tiếng Anh:</strong> Trình độ B2<br>
+                        • <strong>Kỹ năng mềm:</strong> Thuyết trình, giao tiếp, lan tỏa cảm hứng
+                    </p>
+                </div>
+
+                <!-- Info block 3: Triết lý & Tinh thần -->
+                <div class="card-clean rounded-xl p-6 bg-white space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 text-lg">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900">Triết Lý Sống</h3>
+                    <p class="text-xs text-slate-600 italic leading-relaxed">
+                        “Đừng chỉ mơ ước – hãy kiên định với ước mơ của mình. Bởi sự kiên trì hôm nay chính là đôi cánh đưa ta bay xa ngày mai.”
+                    </p>
+                    <div class="text-[11px] font-semibold text-rose-600 pt-1">
+                        — Khổng Đỗ Thanh Huyền
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. LIÊN HỆ & KẾT NỐI (CLEAN CONTACT) -->
+        <section id="contact" class="space-y-6 scroll-mt-24">
+            <div class="border-b border-slate-200 pb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Kết nối & Hợp tác</span>
+                <h2 class="text-2xl font-bold font-display text-slate-900">Liên Hệ Với Thanh Huyền</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <!-- Direct contact info -->
+                <div class="md:col-span-5 space-y-4">
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Thanh Huyền luôn trân trọng mọi cơ hội học hỏi, hợp tác nghiên cứu khoa học, trao đổi học thuật cũng như các hoạt động giao lưu sư phạm và truyền cảm hứng.
+                    </p>
+
+                    <div class="space-y-3 text-xs">
+                        <div class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl">
+                            <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block text-[10px]">Email</span>
+                                <span class="font-semibold text-slate-800" id="contact-email">khongdothanhhuyen@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl">
+                            <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block text-[10px]">Cơ quan</span>
+                                <span class="font-semibold text-slate-800">Khoa CNTT • Trường ĐH Sư phạm Hà Nội</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social buttons -->
+                    <div class="flex items-center gap-2 pt-2">
+                        <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-700 text-sm transition-colors" title="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://scholar.google.com" target="_blank" class="w-10 h-10 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-700 text-sm transition-colors" title="Google Scholar">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-700 text-sm transition-colors" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Message form -->
+                <div class="md:col-span-7 card-clean rounded-2xl p-6 bg-white border border-slate-200">
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="space-y-1">
+                                <label class="font-semibold text-slate-700">Họ và tên của bạn</label>
+                                <input type="text" id="sender-name" required placeholder="Họ và tên..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:outline-none focus:border-slate-400 text-xs">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="font-semibold text-slate-700">Email hoặc Số điện thoại</label>
+                                <input type="text" id="sender-contact" required placeholder="Liên hệ..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:outline-none focus:border-slate-400 text-xs">
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="font-semibold text-slate-700">Nội dung tin nhắn</label>
+                            <textarea id="sender-message" rows="3" required placeholder="Lời nhắn hoặc trao đổi..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:outline-none focus:border-slate-400 text-xs"></textarea>
+                        </div>
+
+                        <button type="submit" class="px-6 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-[10px]"></i>
+                            <span>Gửi lời nhắn</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white py-8 px-4 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div>
+                © 2025 - 2026 <strong>Khổng Đỗ Thanh Huyền</strong> • Miss IT 2025 • Top 20 Miss HNUE 2025
+            </div>
+            <div class="text-slate-400">
+                Khoa Công nghệ thông tin • Trường Đại học Sư phạm Hà Nội (HNUE)
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: QUICK CUSTOMIZE / EDIT INFO DIRECTLY -->
+    <div id="edit-modal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-xl border border-slate-200 space-y-5">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                <div>
+                    <h3 class="text-base font-bold font-display text-slate-900">Tùy Biến Thông Tin Nhanh</h3>
+                    <p class="text-xs text-slate-500">Cập nhật họ tên, link ảnh đại diện, email</p>
+                </div>
+                <button onclick="closeEditModal()" class="w-7 h-7 rounded-lg border border-slate-200 text-slate-400 hover:text-slate-700 flex items-center justify-center">
+                    <i class="fa-solid fa-xmark text-xs"></i>
+                </button>
+            </div>
+
+            <form onsubmit="saveCustomProfile(event)" class="space-y-3.5 text-xs">
+                <div>
+                    <label class="block font-semibold mb-1 text-slate-700">Họ và tên</label>
+                    <input type="text" id="input-name" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs">
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-1 text-slate-700">Link Ảnh Đại Diện (Avatar URL)</label>
+                    <input type="text" id="input-avatar" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs" placeholder="https://...">
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-1 text-slate-700">Tiểu sử ngắn (Hero Bio)</label>
+                    <textarea id="input-bio" rows="2" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs"></textarea>
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-1 text-slate-700">Email liên hệ</label>
+                    <input type="email" id="input-email" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs">
+                </div>
+
+                <div class="flex items-center justify-end gap-2 pt-3 border-t border-slate-200">
+                    <button type="button" onclick="resetDefaultProfile()" class="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 font-semibold hover:bg-slate-50">
+                        Mẫu chuẩn
+                    </button>
+                    <button type="submit" class="px-5 py-2 rounded-lg bg-slate-900 text-white font-semibold hover:bg-slate-800">
+                        Lưu thay đổi
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 space-y-2 pointer-events-none"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Toast notification
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'pointer-events-auto px-4 py-3 rounded-xl shadow-lg border border-slate-200 bg-white text-xs font-semibold text-slate-800 flex items-center gap-2 transform translate-y-3 opacity-0 transition-all duration-300';
+            toast.innerHTML = `<span>✨</span><span>${message}</span>`;
+            container.appendChild(toast);
+
+            requestAnimationFrame(() => {
+                toast.classList.remove('translate-y-3', 'opacity-0');
+            });
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 3200);
+        }
+
+        // Contact Submit
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('sender-name').value;
+            showToast(`💌 Cảm ơn bạn ${name}! Lời nhắn đã được ghi nhận.`);
+            e.target.reset();
+        }
+
+        // Profile State with Real Data
+        const defaultProfile = {
+            name: "Khổng Đỗ Thanh Huyền",
+            avatar: "Ảnh thẻ 3x4.jpg",
+            bio: "Sinh viên năm thứ 4, khoa Công nghệ thông tin, Trường Đại học Sư phạm Hà Nội. Hoa khôi Miss IT 2025, Top 20 Miss HNUE 2025. Kiên định trên hành trình học thuật với 3 công bố quốc tế & tạp chí khoa học đã xuất bản, cùng các công trình nghiên cứu đang trong quá trình xét duyệt và phản biện độc lập.",
+            email: "khongdothanhhuyen@gmail.com"
+        };
+
+        function loadProfile() {
+            const saved = localStorage.getItem('user_portfolio_profile_huyen_v2');
+            const p = saved ? JSON.parse(saved) : defaultProfile;
+
+            document.getElementById('hero-bio').textContent = p.bio;
+            document.getElementById('hero-avatar').src = p.avatar;
+            document.getElementById('contact-email').textContent = p.email;
+
+            // Fill inputs
+            document.getElementById('input-name').value = p.name || defaultProfile.name;
+            document.getElementById('input-avatar').value = p.avatar;
+            document.getElementById('input-bio').value = p.bio;
+            document.getElementById('input-email').value = p.email;
+        }
+
+        function openEditModal() {
+            loadProfile();
+            document.getElementById('edit-modal').classList.remove('hidden');
+        }
+
+        function closeEditModal() {
+            document.getElementById('edit-modal').classList.add('hidden');
+        }
+
+        function saveCustomProfile(e) {
+            e.preventDefault();
+            const p = {
+                name: document.getElementById('input-name').value || defaultProfile.name,
+                avatar: document.getElementById('input-avatar').value || defaultProfile.avatar,
+                bio: document.getElementById('input-bio').value || defaultProfile.bio,
+                email: document.getElementById('input-email').value || defaultProfile.email,
+            };
+
+            localStorage.setItem('user_portfolio_profile_huyen_v2', JSON.stringify(p));
+            loadProfile();
+            closeEditModal();
+            showToast('✨ Đã lưu cập nhật thông tin thành công!');
+        }
+
+        function resetDefaultProfile() {
+            localStorage.removeItem('user_portfolio_profile_huyen_v2');
+            loadProfile();
+            closeEditModal();
+            showToast('🔄 Đã khôi phục dữ liệu chuẩn của Khổng Đỗ Thanh Huyền');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProfile();
+        });
+    </script>
+</body>
+</html>
