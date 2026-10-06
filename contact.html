@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Khổng Đỗ Thanh Huyền</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { background: #FAFAFB; color: #1F2937; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .nav-blur { background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E5E7EB; }
+        .card-clean { background: #fff; border: 1px solid #E5E7EB; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    </style>
+</head>
+<body class="selection:bg-rose-100 selection:text-rose-800">
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-base">H</div>
+                <div>
+                    <div class="font-display font-bold text-base text-slate-900">Khổng Đỗ Thanh Huyền</div>
+                    <p class="text-xs text-slate-500">Khoa CNTT • ĐH Sư phạm Hà Nội</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold tracking-wide text-slate-600">
+                <a href="about.html" class="hover:text-rose-600">Về Thanh Huyền</a>
+                <a href="index.html" class="hover:text-rose-600">Miss HNUE & IT</a>
+                <a href="achievements.html" class="hover:text-rose-600">Bảng Thành Tích</a>
+                <a href="publications.html" class="hover:text-rose-600">Công Bố Khoa Học</a>
+                <a href="contact.html" class="text-rose-700">Liên Hệ</a>
+            </nav>
+            <button onclick="toggleMobileMenu()" class="lg:hidden w-9 h-9 rounded-lg border border-slate-200">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-2 text-sm">
+            <a href="about.html" class="block py-2">✨ Về Thanh Huyền</a>
+            <a href="index.html" class="block py-2">👑 Miss HNUE & IT</a>
+            <a href="achievements.html" class="block py-2">🏆 Thành Tích</a>
+            <a href="publications.html" class="block py-2">📚 Công Bố Khoa Học</a>
+            <a href="contact.html" class="block py-2">💌 Liên Hệ</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-20">
+        <section class="space-y-6">
+            <div class="border-b border-slate-200 pb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Kết nối & Hợp tác</span>
+                <h1 class="text-3xl font-bold font-display text-slate-900">Liên Hệ Với Thanh Huyền</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card-clean rounded-2xl p-6 space-y-4">
+                    <div class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl">
+                        <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <span class="text-slate-400 block text-[10px]">Email</span>
+                            <span class="font-semibold text-slate-800">khongdothanhhuyen@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl">
+                        <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <span class="text-slate-400 block text-[10px]">Cơ quan</span>
+                            <span class="font-semibold text-slate-800">Khoa CNTT • Trường ĐH Sư phạm Hà Nội</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-clean rounded-2xl p-6">
+                    <form class="space-y-4 text-xs">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="font-semibold text-slate-700">Họ và tên</label>
+                                <input type="text" class="w-full mt-1 px-3 py-2 rounded-lg border border-slate-200" placeholder="Họ và tên...">
+                            </div>
+                            <div>
+                                <label class="font-semibold text-slate-700">Liên hệ</label>
+                                <input type="text" class="w-full mt-1 px-3 py-2 rounded-lg border border-slate-200" placeholder="Email / SĐT...">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="font-semibold text-slate-700">Lời nhắn</label>
+                            <textarea rows="4" class="w-full mt-1 px-3 py-2 rounded-lg border border-slate-200" placeholder="Nội dung..."></textarea>
+                        </div>
+                        <button type="button" class="px-6 py-2.5 rounded-lg bg-slate-900 text-white font-semibold">Gửi lời nhắn</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white py-8 px-4 text-center text-xs text-slate-500">
+        © 2025 - 2026 <strong>Khổng Đỗ Thanh Huyền</strong>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

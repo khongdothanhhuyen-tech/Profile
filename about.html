@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về Khổng Đỗ Thanh Huyền</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        roseaccent: { 50: '#FFF1F2', 100: '#FFE4E6', 500: '#F43F5E', 600: '#E11D48', 700: '#BE123C' },
+                        hnueblue: { 50: '#EFF6FF', 100: '#DBEAFE', 600: '#2563EB', 700: '#1D4ED8', 900: '#1E3A8A' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: #FAFAFB; color: #1F2937; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .nav-blur { background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E5E7EB; }
+        .card-clean { background: #fff; border: 1px solid #E5E7EB; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    </style>
+</head>
+<body class="selection:bg-rose-100 selection:text-rose-800">
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-base">H</div>
+                <div>
+                    <div class="font-display font-bold text-base text-slate-900">Khổng Đỗ Thanh Huyền</div>
+                    <p class="text-xs text-slate-500">Khoa CNTT • ĐH Sư phạm Hà Nội</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold tracking-wide text-slate-600">
+                <a href="about.html" class="text-rose-700">Về Thanh Huyền</a>
+                <a href="index.html" class="hover:text-rose-600">Miss HNUE & IT</a>
+                <a href="achievements.html" class="hover:text-rose-600">Bảng Thành Tích</a>
+                <a href="publications.html" class="hover:text-rose-600">Công Bố Khoa Học</a>
+                <a href="contact.html" class="hover:text-rose-600">Liên Hệ</a>
+            </nav>
+            <button onclick="toggleMobileMenu()" class="lg:hidden w-9 h-9 rounded-lg border border-slate-200">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-2 text-sm">
+            <a href="about.html" class="block py-2">✨ Về Thanh Huyền</a>
+            <a href="index.html" class="block py-2">👑 Miss HNUE & IT</a>
+            <a href="achievements.html" class="block py-2">🏆 Thành Tích</a>
+            <a href="publications.html" class="block py-2">📚 Công Bố Khoa Học</a>
+            <a href="contact.html" class="block py-2">💌 Liên Hệ</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-20 space-y-8">
+        <section class="space-y-6">
+            <div class="border-b border-slate-200 pb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Thông tin cá nhân</span>
+                <h1 class="text-3xl font-bold font-display text-slate-900">Về Khổng Đỗ Thanh Huyền</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card-clean rounded-xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="text-base font-bold text-slate-900">Học Vấn & Chuyên Ngành</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        • <strong>Trường:</strong> Trường Đại học Sư phạm Hà Nội (HNUE)<br>
+                        • <strong>Khoa:</strong> Công nghệ thông tin (FIT)<br>
+                        • <strong>Khóa học:</strong> Sinh viên năm thứ 4<br>
+                        • <strong>Định hướng:</strong> Machine Learning, EdTech, Nghiên cứu GD
+                    </p>
+                </div>
+
+                <div class="card-clean rounded-xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 class="text-base font-bold text-slate-900">Kỹ Năng Nổi Bật</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        • <strong>Công nghệ:</strong> Python, Machine Learning, Web Learning<br>
+                        • <strong>Học thuật:</strong> Viết bài báo khoa học, phân tích thống kê<br>
+                        • <strong>Sư phạm:</strong> Xử lý tình huống GD, thiết kế hoạt động toán học<br>
+                        • <strong>Tiếng Anh:</strong> Trình độ B2
+                    </p>
+                </div>
+
+                <div class="card-clean rounded-xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center"><i class="fa-solid fa-compass"></i></div>
+                    <h3 class="text-base font-bold text-slate-900">Triết Lý Sống</h3>
+                    <p class="text-xs text-slate-600 italic leading-relaxed">“Đừng chỉ mơ ước – hãy kiên định với ước mơ của mình. Bởi sự kiên trì hôm nay chính là đôi cánh đưa ta bay xa ngày mai.”</p>
+                    <div class="text-[11px] font-semibold text-rose-600 pt-1">— Khổng Đỗ Thanh Huyền</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-clean rounded-2xl p-6 sm:p-8">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="px-2.5 py-1 rounded bg-blue-50 text-blue-700 text-[11px] font-bold">🎓 Nghiệp vụ sư phạm</span>
+            </div>
+            <h2 class="text-2xl font-bold font-display text-slate-900 mb-3">Hội thi xử lý tình huống nghiệp vụ sư phạm</h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                Việc tham gia 3 năm liên tiếp (2023, 2024, 2025) cho thấy sự rèn luyện bền bỉ, năng lực ứng xử sư phạm và tinh thần trách nhiệm trong môi trường giáo dục.
+            </p>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white py-8 px-4 text-center text-xs text-slate-500">
+        © 2025 - 2026 <strong>Khổng Đỗ Thanh Huyền</strong>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
